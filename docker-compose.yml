@@ -1,0 +1,17 @@
+version: '3'
+services:
+  nextjs:
+    build: 
+      context: ./
+      # target: runner
+    # volumes:
+      # - .:/src/app
+    # command: num run dev
+    # ports:
+    #   - "3000:3000"
+    # environment:
+    #   - NODE_ENV=development
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
